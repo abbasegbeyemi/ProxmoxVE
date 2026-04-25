@@ -17,8 +17,6 @@ msg_info "Installing Dependencies"
 $STD apt install -y libglib2.0-0 ffmpeg
 msg_ok "Installed Dependencies"
 
-PYTHON_VERSION="3.13" setup_uv
-NODE_VERSION="22" setup_nodejs
 fetch_and_deploy_gh_release "bambuddy" "maziggy/bambuddy" "tarball" "latest" "/opt/bambuddy"
 
 curl -fsSL https://raw.githubusercontent.com/maziggy/bambuddy/main/install/install.sh -o install.sh && chmod +x install.sh && ./install.sh --path /opt/bambuddy --port 8000 --yes
