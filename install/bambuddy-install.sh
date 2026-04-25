@@ -17,8 +17,6 @@ msg_info "Installing Dependencies"
 $STD apt install -y libglib2.0-0 ffmpeg
 msg_ok "Installed Dependencies"
 
-fetch_and_deploy_gh_release "bambuddy" "maziggy/bambuddy" "tarball" "latest" "/opt/bambuddy"
-
 curl -fsSL https://raw.githubusercontent.com/maziggy/bambuddy/main/install/install.sh -o install.sh && chmod +x install.sh && ./install.sh --path /opt/bambuddy --port 8000 --yes
 # msg_info "Setting up Python Environment"
 # cd /opt/bambuddy
